@@ -9,8 +9,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="7dp">
+        tools:ignore="MissingConstraints">
 
         <ImageView
             android:id="@+id/uniImage"

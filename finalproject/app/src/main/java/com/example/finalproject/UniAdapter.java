@@ -15,21 +15,22 @@ import java.util.List;
 
 public class UniAdapter extends ArrayAdapter {
     List<Uni80>uni80List;
-    public UniAdapter(@NonNull Context context, int resource, @NonNull List objects) {
+    public UniAdapter(@NonNull Context context, int resource, @NonNull List<Uni80> objects) {
         super(context, resource, objects);
+        uni80List = objects;
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_main3,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.uni80row,parent,false);
         Uni80 currentUni = uni80List.get(position);
 
         TextView textView = view.findViewById(R.id.uniname);
         ImageView imageView = view.findViewById(R.id.uniImage);
 
-        textView.setText(currentUni.getUniName();
-        imageView.setImageResource(currentUni.getUniImage();
+        textView.setText(currentUni.getUniName());
+        imageView.setImageResource(currentUni.getUniImage());
         return view;
 
     }

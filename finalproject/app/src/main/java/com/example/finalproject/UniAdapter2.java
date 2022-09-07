@@ -17,12 +17,13 @@ public class UniAdapter2 extends ArrayAdapter {
     List<Uni90> uni90List;
     public UniAdapter2(@NonNull Context context, int resource, @NonNull List objects) {
         super(context, resource, objects);
+        uni90List = objects;
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_main4,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.uni90row,parent,false);
         Uni90 currentUni90 = uni90List.get(position);
 
         TextView textView = view.findViewById(R.id.Uniname2);
